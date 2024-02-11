@@ -5,14 +5,12 @@ using UnityEngine;
 
 public class Throw : MonoBehaviour
 {
-    private Rigidbody rb;
     [SerializeField] private float forceImpulse;
 
     void Start()
     {
-        rb = null;
+  
     }
-
     
     void Update()
     {
@@ -21,16 +19,14 @@ public class Throw : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "ObjsToThrow" && rb == null)
+        if (other.tag == "ObjsToThrow")
         {
-            rb = other.AddComponent<Rigidbody>();
             other.GetComponent<RemoveRb>().JustGetRigidbody();
-
         }
 
-        if (rb != null)
+        if (other.GetComponent<Rigidbody>() != null)
         {
-            rb.AddForce(Vector3.up * forceImpulse, ForceMode.Impulse);
+            other.GetComponent<Rigidbody>().AddForce(transform.forward * forceImpulse, ForceMode.Impulse);
         }
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class RemoveRb : MonoBehaviour
 {
     private Rigidbody rb;
+    [SerializeField] private float mass;
 
     void Start()
     {
@@ -26,6 +27,8 @@ public class RemoveRb : MonoBehaviour
 
     public void JustGetRigidbody()
     {
+        Rigidbody newRb = gameObject.AddComponent<Rigidbody>();
+        GetComponent<Rigidbody>().mass = mass;
         StartCoroutine(SetHaveRb());
     }
     

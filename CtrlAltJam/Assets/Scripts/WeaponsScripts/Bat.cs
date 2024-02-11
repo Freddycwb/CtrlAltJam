@@ -32,7 +32,7 @@ public class Bat : MonoBehaviour
     {
         if (_input != null && _input.batButtonDown)
         {
-            Instantiate(damage, damageSpawnPoint.position, Quaternion.identity);
+            Instantiate(damage, damageSpawnPoint.position, damageSpawnPoint.rotation);
         }
     }
 }
