@@ -94,4 +94,40 @@ public class PlayerInput : MonoBehaviour, IInput
             return Input.GetKeyUp(KeyCode.Space);
         }
     }
+
+    public bool batButtonDown
+    {
+        get
+        {
+            if (!_canControl)
+            {
+                return false;
+            }
+            return Input.GetMouseButtonDown(0);
+        }
+    }
+
+    public bool batButton
+    {
+        get
+        {
+            if (!_canControl)
+            {
+                return false;
+            }
+            return Input.GetMouseButton(0);
+        }
+    }
+
+    public bool batButtonUp
+    {
+        get
+        {
+            if (!_canControl)
+            {
+                return false;
+            }
+            return Input.GetMouseButtonUp(0);
+        }
+    }
 }

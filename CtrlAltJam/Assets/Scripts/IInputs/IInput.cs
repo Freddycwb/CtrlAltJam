@@ -9,4 +9,8 @@ public interface IInput
     bool aButtonDown { get; }
     bool aButton { get; }
     bool aButtonUp { get; }
+
+    bool batButtonDown { get; }
+    bool batButton { get; }
+    bool batButtonUp { get; }
 }
