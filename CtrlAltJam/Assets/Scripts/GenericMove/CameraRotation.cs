@@ -23,7 +23,7 @@ public class CameraRotation : MonoBehaviour
     private void Update()
     {
         xRotation -= _input.look.x;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        xRotation = Mathf.Clamp(xRotation, -135f, 135f);
 
         yRotation += _input.look.y;
         transform.eulerAngles = new Vector3(xRotation * _input.sensitivity.x, yRotation * _input.sensitivity.y, 0f);
