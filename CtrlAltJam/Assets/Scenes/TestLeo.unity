@@ -250,6 +250,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 442200714675008615, guid: abe0127d3921d554ca15df85c2efaba4, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1016787424}
+    - target: {fileID: 442200714675008615, guid: abe0127d3921d554ca15df85c2efaba4, type: 3}
+      propertyPath: delayAttack
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 442200714675008615, guid: abe0127d3921d554ca15df85c2efaba4, type: 3}
+      propertyPath: delayToDamage
+      value: 0.41
+      objectReference: {fileID: 0}
     - target: {fileID: 2553054635582231121, guid: abe0127d3921d554ca15df85c2efaba4, type: 3}
       propertyPath: m_Name
       value: Player
@@ -317,7 +329,7 @@ Animator:
   m_GameObject: {fileID: 1016787422}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9aafbb8be1d17854dad76cbbf4113871, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -10,7 +10,9 @@ public class Bat : MonoBehaviour
     [SerializeField] private GameObject damage;
     [SerializeField] private Transform damageSpawnPoint;
     [SerializeField] private float delayAttack;
+    [SerializeField] private float delayToDamage;
     [SerializeField] private bool isAttacking;
+    [SerializeField] private Animator animator;
 
 
     private void Start()
@@ -31,18 +33,21 @@ public class Bat : MonoBehaviour
         {
             StartCoroutine(DelayedAttack());
         }
+        
     }
 
     private IEnumerator DelayedAttack()
     {
+        animator.Play("attack");
         isAttacking = true;
-        yield return new WaitForSeconds(delayAttack);
+        yield return new WaitForSeconds(delayToDamage);
         Attack();
+        yield return new WaitForSeconds(delayAttack - delayToDamage);
+        isAttacking = false;
     }
 
     private void Attack()
     {
         Instantiate(damage, damageSpawnPoint.position, damageSpawnPoint.rotation);
-        isAttacking = false;
     }
 }
