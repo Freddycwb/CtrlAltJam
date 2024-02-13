@@ -15,7 +15,7 @@ public class Bat : MonoBehaviour
     [SerializeField] private bool isAttacking;
     [SerializeField] private Animator animator;
 
-    public Action bat;
+    public Action attack;
 
     private void Start()
     {
@@ -41,6 +41,12 @@ public class Bat : MonoBehaviour
     private IEnumerator DelayedAttack()
     {
         animator.Play("attack");
+
+        if (attack != null)
+        {
+            attack.Invoke();
+        }
+
         isAttacking = true;
         yield return new WaitForSeconds(delayToDamage);
         Attack();

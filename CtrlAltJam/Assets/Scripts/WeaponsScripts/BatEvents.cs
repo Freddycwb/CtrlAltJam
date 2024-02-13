@@ -1,18 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BatEvents : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private Bat bat;
+
+    [SerializeField] private UnityEvent onAttack;
+
     void Start()
     {
-        
+        bat.attack += InvokeOnAttack;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void InvokeOnAttack()
     {
-        
+        if (onAttack != null)
+        {
+            onAttack.Invoke();
+        }
+    }
+
+    private void OnDestroy()
+    {
+        bat.attack -= InvokeOnAttack;
     }
 }
