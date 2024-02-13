@@ -103,7 +103,7 @@ public class PlayerInput : MonoBehaviour, IInput
             {
                 return false;
             }
-            return Input.GetMouseButtonDown(0);
+            return Input.GetMouseButtonDown(1);
         }
     }
 
@@ -115,11 +115,47 @@ public class PlayerInput : MonoBehaviour, IInput
             {
                 return false;
             }
-            return Input.GetMouseButton(0);
+            return Input.GetMouseButton(1);
         }
     }
 
     public bool batButtonUp
+    {
+        get
+        {
+            if (!_canControl)
+            {
+                return false;
+            }
+            return Input.GetMouseButtonUp(1);
+        }
+    }
+
+    public bool sprayButtonDown
+    {
+        get
+        {
+            if (!_canControl)
+            {
+                return false;
+            }
+            return Input.GetMouseButtonDown(0);
+        }
+    }
+
+    public bool sprayButton
+    {
+        get
+        {
+            if (!_canControl)
+            {
+                return false;
+            }
+            return Input.GetMouseButton(0);
+        }
+    }
+
+    public bool sprayButtonUp
     {
         get
         {

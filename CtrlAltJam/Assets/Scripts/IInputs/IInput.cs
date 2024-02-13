@@ -13,4 +13,8 @@ public interface IInput
     bool batButtonDown { get; }
     bool batButton { get; }
     bool batButtonUp { get; }
+
+    bool sprayButtonDown { get; }
+    bool sprayButton { get; }
+    bool sprayButtonUp { get; }
 }
