@@ -12,7 +12,7 @@ public class SetParent : MonoBehaviour
 
     void Start()
     {
-        if (targetGameObjectVariable != null)
+        if (targetGameObjectVariable != null && targetGameObjectVariable.value != null)
         {
             _targetTransform = targetGameObjectVariable.value.transform;
         }

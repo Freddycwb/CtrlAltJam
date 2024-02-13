@@ -10,10 +10,19 @@ public class BasicModel : MonoBehaviour
     [SerializeField] private PathFinder pathFinder;
     [SerializeField] private PlaneMove planeMove;
 
+    [SerializeField] private PositionToDirection masterTarget; 
     [SerializeField] private FootProceduralAnimation legs;
+    [SerializeField] private RotateToDirectionOneAxis rightFoot;
+    [SerializeField] private RotateToDirectionOneAxis leftFoot;
 
     private void Awake()
     {
-
+        masterTarget.SetInput(input);
+        legs.SetPathFinder(pathFinder);
+        legs.SetInput(input);
+        legs.SetRigidbody(rb);
+        legs.SetPlaneMove(planeMove);
+        rightFoot.SetInput(input);
+        leftFoot.SetInput(input);
     }
 }

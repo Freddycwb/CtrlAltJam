@@ -603,6 +603,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4582126061985306696}
     m_Modifications:
+    - target: {fileID: 60359947778190146, guid: 45de0f909c76457478ea2c003d06e463, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 4126318249201970512}
+    - target: {fileID: 60359947778190146, guid: 45de0f909c76457478ea2c003d06e463, type: 3}
+      propertyPath: input
+      value: 
+      objectReference: {fileID: 5443084826160278665}
+    - target: {fileID: 60359947778190146, guid: 45de0f909c76457478ea2c003d06e463, type: 3}
+      propertyPath: senses
+      value: 
+      objectReference: {fileID: 7454483742697419237}
+    - target: {fileID: 60359947778190146, guid: 45de0f909c76457478ea2c003d06e463, type: 3}
+      propertyPath: planeMove
+      value: 
+      objectReference: {fileID: 7748300916214471855}
+    - target: {fileID: 60359947778190146, guid: 45de0f909c76457478ea2c003d06e463, type: 3}
+      propertyPath: pathFinder
+      value: 
+      objectReference: {fileID: 7706365511423827741}
     - target: {fileID: 4754215961773459505, guid: 45de0f909c76457478ea2c003d06e463, type: 3}
       propertyPath: m_Name
       value: BasicModel
