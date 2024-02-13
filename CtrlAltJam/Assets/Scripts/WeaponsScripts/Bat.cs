@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
@@ -14,6 +15,7 @@ public class Bat : MonoBehaviour
     [SerializeField] private bool isAttacking;
     [SerializeField] private Animator animator;
 
+    public Action bat;
 
     private void Start()
     {

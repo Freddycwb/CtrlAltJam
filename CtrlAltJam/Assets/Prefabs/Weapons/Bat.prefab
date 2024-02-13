@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6358198257499793488}
+  - component: {fileID: 344166949074677389}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -32,6 +33,27 @@ Transform:
   - {fileID: 3842471244734884613}
   m_Father: {fileID: 5906724848693241331}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &344166949074677389
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916900168115219777}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9aafbb8be1d17854dad76cbbf4113871, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5927373193611533355
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,6 +136,9 @@ MonoBehaviour:
   damage: {fileID: 7238771191514718487, guid: 4053c0ee1aebf5b4d972160304586ea4, type: 3}
   damageSpawnPoint: {fileID: 4168597191964062311}
   delayAttack: 1.5
+  delayToDamage: 0
+  isAttacking: 0
+  animator: {fileID: 344166949074677389}
 --- !u!1 &8540647330585324246
 GameObject:
   m_ObjectHideFlags: 0
