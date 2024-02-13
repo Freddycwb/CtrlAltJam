@@ -28,6 +28,10 @@ public class Throw : MonoBehaviour
         {
             other.GetComponent<Rigidbody>().AddForce(transform.forward * forceImpulse, ForceMode.Impulse);
         }
+        else if (other.GetComponentInParent<Rigidbody>() != null)
+        {
+            other.GetComponentInParent<Rigidbody>().AddForce(transform.forward * forceImpulse, ForceMode.Impulse);
+        }
     }
 }
 
