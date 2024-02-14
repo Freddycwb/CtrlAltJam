@@ -1743,7 +1743,7 @@ PrefabInstance:
       objectReference: {fileID: 56260709693732403}
     - target: {fileID: 4211060165275433083, guid: 4cc21665095e84f40b9009c798ce8904, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.06
+      value: -2.7534957
       objectReference: {fileID: 0}
     - target: {fileID: 4211060165275433083, guid: 4cc21665095e84f40b9009c798ce8904, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1751,7 +1751,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4211060165275433083, guid: 4cc21665095e84f40b9009c798ce8904, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.1519563
+      value: 0.46788454
       objectReference: {fileID: 0}
     - target: {fileID: 4211060165275433083, guid: 4cc21665095e84f40b9009c798ce8904, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1907,6 +1907,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 528221422096641897}
   m_SourcePrefab: {fileID: 100100000, guid: 4cc21665095e84f40b9009c798ce8904, type: 3}
+--- !u!114 &243339258056483447 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7748300916214471855, guid: 4cc21665095e84f40b9009c798ce8904, type: 3}
+  m_PrefabInstance: {fileID: 7559289112475287256}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3948191300164729586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ddabdea7836114083207eb4a515a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &481263248678168999 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7947225216499357567, guid: 4cc21665095e84f40b9009c798ce8904, type: 3}
@@ -2065,7 +2076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 756c84b8d7bfe0343818eb080a6a8832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planeMove: {fileID: 0}
+  planeMove: {fileID: 243339258056483447}
 --- !u!4 &4125894035619831401 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5883358792104861873, guid: 4cc21665095e84f40b9009c798ce8904, type: 3}

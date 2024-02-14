@@ -35,7 +35,6 @@ public class Throwable : MonoBehaviour
 
     public void JustGetHit(Vector3 force)
     {
-        Debug.Log("aaa");
         if (!_haveRigidbody)
         {
             gameObject.AddComponent<Rigidbody>();

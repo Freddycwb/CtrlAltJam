@@ -397,6 +397,10 @@ PrefabInstance:
       propertyPath: pathFinder
       value: 
       objectReference: {fileID: 5204276976301665746}
+    - target: {fileID: 8374656729753912899, guid: f5dfe2d631cf8fd468355858fa6d0e0d, type: 3}
+      propertyPath: m_Data.m_Offset.y
+      value: 90
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -510,6 +514,10 @@ PrefabInstance:
       propertyPath: footProceduralAnimation
       value: 
       objectReference: {fileID: 2782124633219611782}
+    - target: {fileID: 6323927233686172345, guid: 4cc21665095e84f40b9009c798ce8904, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: d4062fc787f19ed479395439012eed63, type: 2}
     - target: {fileID: 7237239165339984907, guid: 4cc21665095e84f40b9009c798ce8904, type: 3}
       propertyPath: spawnPoint
       value: 

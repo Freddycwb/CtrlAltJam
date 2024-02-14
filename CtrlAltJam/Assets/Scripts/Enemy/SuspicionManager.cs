@@ -154,11 +154,11 @@ public class SuspicionManager : MonoBehaviour
     public void Alert(Vector3 pos)
     {
         SetPlayerLastPosition(pos);
-        if (stateMachine.currentState != EnemyState.chase)
+        if (stateMachine.currentState == EnemyState.waiting)
         {
-            if (startChase != null)
+            if (startLooking != null)
             {
-                startChase.Invoke();
+                startLooking.Invoke();
             }
         }
     }
