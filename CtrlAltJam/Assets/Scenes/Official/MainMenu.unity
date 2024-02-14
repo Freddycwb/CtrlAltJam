@@ -1797,7 +1797,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2633627212843331117}
-  - component: {fileID: 8590892628281456322}
   m_Layer: 0
   m_Name: BasicModel
   m_TagString: Untagged
@@ -2829,28 +2828,6 @@ Transform:
   - {fileID: 321312037286435032}
   m_Father: {fileID: 2561814324967490763}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8590892628281456322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3896973100242818481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba30d6823c57b9c418c0c91ba5cc38d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  input: {fileID: 0}
-  senses: {fileID: 0}
-  rb: {fileID: 0}
-  pathFinder: {fileID: 0}
-  planeMove: {fileID: 0}
-  viewTarget: {fileID: 2534598198940314880}
-  pivotTarget: {fileID: 4095852413990502056}
-  legs: {fileID: 3651165775082476014}
-  rightFoot: {fileID: 3698968823321815790}
-  leftFoot: {fileID: 326894369546580143}
 --- !u!4 &8662050846430744889
 Transform:
   m_ObjectHideFlags: 0

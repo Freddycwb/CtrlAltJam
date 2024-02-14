@@ -6,6 +6,7 @@ public class LockMove : MonoBehaviour
 {
     [SerializeField] private PlaneMove planeMove;
     private List<GameObject> enemiesHolding = new List<GameObject>();
+    [SerializeField] private GameEvent gameOver;
     private float maxSpeed;
 
     private void Start()
@@ -15,10 +16,14 @@ public class LockMove : MonoBehaviour
 
     public void Lock(Throwable enemy)
     {
-        planeMove.SetMaxSpeed(0);
         enemiesHolding.Add(enemy.gameObject);
         enemy.getHit += Free;
         enemy.getHitForTheFirstTime += Free;
+        planeMove.SetMaxSpeed(maxSpeed / (3 * enemiesHolding.Count));
+        if (enemiesHolding.Count >= 3)
+        {
+            gameOver.Raise();
+        }
     }
 
     public void Free(GameObject enemyGameObject)
@@ -30,6 +35,10 @@ public class LockMove : MonoBehaviour
         if (enemiesHolding.Count <= 0)
         {
             planeMove.SetMaxSpeed(maxSpeed);
+        }
+        else
+        {
+            planeMove.SetMaxSpeed(maxSpeed / (3 * enemiesHolding.Count));
         }
     }
 

@@ -6,12 +6,11 @@ using UnityEngine;
 public class Spray : MonoBehaviour
 {
     [SerializeField] private Color colorSpray;
-    [SerializeField] public float sprayIntensity = 0.1f;
+    [SerializeField] private float sprayIntensity = 0.1f;
+    [SerializeField] private float sprayDistance = 5;
 
     [SerializeField] private GameObject input;
     private IInput _input;
-
-    private bool pintando = false;
 
     private void Start()
     {
@@ -27,12 +26,10 @@ public class Spray : MonoBehaviour
 
     void Update()
     {
-        pintando = _input.sprayButton;
-
-        if (pintando)
+        if (_input.sprayButton)
         {
             RaycastHit hit;
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, sprayDistance))
             {
                 Paint(hit);
             }
@@ -46,16 +43,9 @@ public class Spray : MonoBehaviour
 
     void Paint(RaycastHit hit)
     {
-        if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Paint"))
+        if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Prop"))
         {
-            Renderer rend = hit.transform.GetComponent<Renderer>();
-            if (rend == null)
-            {
-                Debug.LogError("Objeto não possui Renderer.");
-                return;
-            }
-
-            rend.material.color = Color.Lerp(rend.material.color, colorSpray, Time.deltaTime * sprayIntensity);
+            hit.transform.gameObject.GetComponent<Paintable>().Paint(colorSpray, sprayIntensity);
         }
     }
 }

@@ -35,11 +35,10 @@ public class Throwable : MonoBehaviour
 
     public void JustGetHit(Vector3 force)
     {
-        if (!_haveRigidbody)
+        if (!_haveRigidbody && rb == null)
         {
-            gameObject.AddComponent<Rigidbody>();
-            GetComponent<Rigidbody>().mass = mass;
-            rb = GetComponent<Rigidbody>();
+            rb = gameObject.transform.parent.gameObject.AddComponent<Rigidbody>();
+            gameObject.transform.parent.gameObject.GetComponent<Rigidbody>().mass = mass;
             StartCoroutine(SetHaveRb());
         }
         if (_getHitBefore)
@@ -56,7 +55,10 @@ public class Throwable : MonoBehaviour
                 getHitForTheFirstTime.Invoke(gameObject);
             }
         }
-        rb.AddForce(force, ForceMode.Impulse);
+        if (rb != null)
+        {
+            rb.AddForce(force, ForceMode.Impulse);
+        }
     }
     
     private IEnumerator SetHaveRb()

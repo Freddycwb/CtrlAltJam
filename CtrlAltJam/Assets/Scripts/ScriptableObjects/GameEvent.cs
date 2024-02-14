@@ -2,17 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameEvent : MonoBehaviour
+[CreateAssetMenu]
+public class GameEvent : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
+    private readonly List<InvokeAfterEvent> _eventListeners = new List<InvokeAfterEvent>();
+
+    public void Raise()
     {
-        
+        for (int i = _eventListeners.Count - 1; i >= 0; i--)
+            _eventListeners[i].OnEventRaised();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RegisterListener(InvokeAfterEvent listener)
     {
-        
+        if (!_eventListeners.Contains(listener))
+            _eventListeners.Add(listener);
+    }
+
+    public void UnregisterListener(InvokeAfterEvent listener)
+    {
+        if (_eventListeners.Contains(listener))
+            _eventListeners.Remove(listener);
     }
 }
