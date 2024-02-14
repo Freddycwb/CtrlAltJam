@@ -903,6 +903,10 @@ PrefabInstance:
       propertyPath: pathFinder
       value: 
       objectReference: {fileID: 7706365511423827741}
+    - target: {fileID: 2225318171435647540, guid: 45de0f909c76457478ea2c003d06e463, type: 3}
+      propertyPath: m_Data.m_Offset.y
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 4754215961773459505, guid: 45de0f909c76457478ea2c003d06e463, type: 3}
       propertyPath: m_Name
       value: BasicModel

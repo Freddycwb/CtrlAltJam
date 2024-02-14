@@ -1084,6 +1084,10 @@ PrefabInstance:
       propertyPath: m_Data.m_Root
       value: 
       objectReference: {fileID: 2233010167422717156}
+    - target: {fileID: 2225318171435647540, guid: 45de0f909c76457478ea2c003d06e463, type: 3}
+      propertyPath: m_Data.m_ConstrainedObject
+      value: 
+      objectReference: {fileID: 6804053891106378260}
     - target: {fileID: 4599517975542483583, guid: 45de0f909c76457478ea2c003d06e463, type: 3}
       propertyPath: m_Data.m_ConstrainedObject
       value: 
