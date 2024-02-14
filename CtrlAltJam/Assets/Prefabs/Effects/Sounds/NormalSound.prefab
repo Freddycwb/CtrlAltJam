@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1668955599352361194}
   - component: {fileID: 8692578659345594663}
   m_Layer: 0
-  m_Name: LowSound
+  m_Name: NormalSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,8 +53,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 3
-  MaxDistance: 50
+  MinDistance: 5
+  MaxDistance: 100
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -64,31 +64,31 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.06
+      time: 0.05
       value: 1
-      inSlope: -3.7902608
-      outSlope: -3.7902608
+      inSlope: -3.776169
+      outSlope: -3.776169
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.107171275
+      outWeight: 0.15035799
     - serializedVersion: 3
-      time: 0.48
+      time: 0.4
       value: 0.125
-      inSlope: -0.6033012
-      outSlope: -0.6033012
+      inSlope: -0.6489777
+      outSlope: -0.6489777
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.19680566
+      outWeight: 0.17661099
     - serializedVersion: 3
       time: 1
       value: 0
-      inSlope: -0.060023926
-      outSlope: -0.060023926
+      inSlope: -0.06135517
+      outSlope: -0.06135517
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 1
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
