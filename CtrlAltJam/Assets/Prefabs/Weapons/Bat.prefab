@@ -136,7 +136,7 @@ MonoBehaviour:
   damage: {fileID: 7238771191514718487, guid: 4053c0ee1aebf5b4d972160304586ea4, type: 3}
   damageSpawnPoint: {fileID: 4168597191964062311}
   delayAttack: 1.5
-  delayToDamage: 0
+  delayToDamage: 0.36
   isAttacking: 0
   animator: {fileID: 344166949074677389}
 --- !u!1 &8540647330585324246

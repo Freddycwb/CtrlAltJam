@@ -16,8 +16,8 @@ TagManager:
   - PlayerBody
   - Senses
   - Damage
-  - 
-  - 
+  - Enemy
+  - PlayerHealth
   - 
   - 
   - 

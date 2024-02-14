@@ -16,6 +16,11 @@ public class PlaneMove : MonoBehaviour
     public Action startMove;
     public Action endMove;
 
+    public float GetMaxSpeed()
+    {
+        return maxSpeed;
+    }
+
     private void Start()
     {
         if (input == null && GetComponent<IInput>() != null)

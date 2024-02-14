@@ -7,30 +7,11 @@ public class Throw : MonoBehaviour
 {
     [SerializeField] private float forceImpulse;
 
-    void Start()
-    {
-  
-    }
-    
-    void Update()
-    {
-
-    }
-
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "ObjsToThrow")
+        if (other.GetComponent<Throwable>() != null)
         {
-            other.GetComponent<RemoveRb>().JustGetRigidbody();
-        }
-
-        if (other.GetComponent<Rigidbody>() != null)
-        {
-            other.GetComponent<Rigidbody>().AddForce(transform.forward * forceImpulse, ForceMode.Impulse);
-        }
-        else if (other.GetComponentInParent<Rigidbody>() != null)
-        {
-            other.GetComponentInParent<Rigidbody>().AddForce(transform.forward * forceImpulse, ForceMode.Impulse);
+            other.GetComponent<Throwable>().JustGetHit(transform.forward * forceImpulse);
         }
     }
 }

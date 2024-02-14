@@ -40,7 +40,7 @@ public class Bat : MonoBehaviour
 
     private IEnumerator DelayedAttack()
     {
-        animator.Play("attack");
+        animator.SetTrigger("Attack");
 
         if (attack != null)
         {
