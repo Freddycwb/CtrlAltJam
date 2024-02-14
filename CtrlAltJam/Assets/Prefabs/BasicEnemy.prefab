@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0594ad96fc01157489abaffd0f2c92e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  suspicion: {fileID: 0}
+  suspicion: {fileID: 3917177040388647511}
   startLooking:
     m_PersistentCalls:
       m_Calls:
@@ -515,7 +515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0594ad96fc01157489abaffd0f2c92e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  suspicion: {fileID: 0}
+  suspicion: {fileID: 3917177040388647511}
   startLooking:
     m_PersistentCalls:
       m_Calls: []
