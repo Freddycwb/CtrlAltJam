@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,10 +9,13 @@ public class Spray : MonoBehaviour
     [SerializeField] private Color colorSpray;
     [SerializeField] private float sprayIntensity = 0.1f;
     [SerializeField] private float sprayDistance = 5;
-    [SerializeField] private GameObject collider;
+    [SerializeField] private GameObject damage;
 
     [SerializeField] private GameObject input;
     private IInput _input;
+
+    public Action startPaint;
+    public Action stopPaint;
 
     private void Start()
     {
@@ -24,21 +28,29 @@ public class Spray : MonoBehaviour
             _input = input.GetComponent<IInput>();
         }
 
-        collider.GetComponent<Painter>().sprayIntensity = sprayIntensity;
+        damage.GetComponent<Painter>().sprayIntensity = sprayIntensity;
     }
 
     void Update()
     {
         if (_input.sprayButtonDown)
         {
-            collider.SetActive(true);
-            collider.GetComponent<Painter>().colorSpray = colorSpray;
+            damage.SetActive(true);
+            damage.GetComponent<Painter>().colorSpray = colorSpray;
+            if (startPaint != null)
+            {
+                startPaint.Invoke();
+            }
         }
 
         if (_input.sprayButtonUp)
         {
-            collider.SetActive(false);
-            colorSpray = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
+            damage.SetActive(false);
+            colorSpray = UnityEngine.Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
+            if (stopPaint != null)
+            {
+                stopPaint.Invoke();
+            }
         }
     }
 

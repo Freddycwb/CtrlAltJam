@@ -29,7 +29,6 @@ public class Paintable : MonoBehaviour
             {
                 paint.Invoke();
             }
-            Debug.Log("pinto");
         }
         if (currentPaint >= 1)
         {
@@ -37,7 +36,6 @@ public class Paintable : MonoBehaviour
             {
                 fullPaint.Invoke();
             }
-            Debug.Log("pinto tudo");
         }
     }
 }

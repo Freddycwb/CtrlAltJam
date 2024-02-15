@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,9 @@ public class LockMove : MonoBehaviour
     private List<GameObject> enemiesHolding = new List<GameObject>();
     [SerializeField] private GameEvent gameOver;
     private float maxSpeed;
+
+    public Action onLock;
+    public Action onFree;
 
     private void Start()
     {
@@ -24,6 +28,10 @@ public class LockMove : MonoBehaviour
         enemy.getHit += Free;
         enemy.getHitForTheFirstTime += Free;
         planeMove.SetMaxSpeed(maxSpeed / (3 * enemiesHolding.Count));
+        if (onLock != null)
+        {
+            onLock.Invoke();
+        }
         if (enemiesHolding.Count >= 3)
         {
             gameOver.Raise();
@@ -43,6 +51,10 @@ public class LockMove : MonoBehaviour
         else
         {
             planeMove.SetMaxSpeed(maxSpeed / (3 * enemiesHolding.Count));
+        }
+        if (onFree != null)
+        {
+            onFree.Invoke();
         }
     }
 
