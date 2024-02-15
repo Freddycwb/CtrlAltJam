@@ -8,6 +8,7 @@ public class Spray : MonoBehaviour
     [SerializeField] private Color colorSpray;
     [SerializeField] private float sprayIntensity = 0.1f;
     [SerializeField] private float sprayDistance = 5;
+    [SerializeField] private GameObject collider;
 
     [SerializeField] private GameObject input;
     private IInput _input;
@@ -22,30 +23,23 @@ public class Spray : MonoBehaviour
         {
             _input = input.GetComponent<IInput>();
         }
+
+        collider.GetComponent<Painter>().sprayIntensity = sprayIntensity;
     }
 
     void Update()
     {
-        if (_input.sprayButton)
+        if (_input.sprayButtonDown)
         {
-            RaycastHit hit;
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, sprayDistance))
-            {
-                Paint(hit);
-            }
+            collider.SetActive(true);
+            collider.GetComponent<Painter>().colorSpray = colorSpray;
         }
 
         if (_input.sprayButtonUp)
         {
+            collider.SetActive(false);
             colorSpray = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
         }
     }
 
-    void Paint(RaycastHit hit)
-    {
-        if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Prop"))
-        {
-            hit.transform.gameObject.GetComponent<Paintable>().Paint(colorSpray, sprayIntensity);
-        }
-    }
 }

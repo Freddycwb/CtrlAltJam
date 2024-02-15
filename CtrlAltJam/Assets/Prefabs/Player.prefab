@@ -1706,18 +1706,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6976282326610521088}
     m_Modifications:
-    - target: {fileID: 1218236058322227551, guid: 86a38ebb966a8a0468ef418ad23a0dfe, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.351
-      objectReference: {fileID: 0}
-    - target: {fileID: 1218236058322227551, guid: 86a38ebb966a8a0468ef418ad23a0dfe, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.34
-      objectReference: {fileID: 0}
-    - target: {fileID: 1218236058322227551, guid: 86a38ebb966a8a0468ef418ad23a0dfe, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.445
-      objectReference: {fileID: 0}
     - target: {fileID: 1337710226674592340, guid: 86a38ebb966a8a0468ef418ad23a0dfe, type: 3}
       propertyPath: m_Name
       value: Spray

@@ -28,7 +28,7 @@ public class Throwable : MonoBehaviour
     {
         if (!_haveRigidbody && rb != null && rb.velocity.magnitude <= 0 && _delayTimePass)
         {
-            Destroy(GetComponent<Rigidbody>());
+            Destroy(rb);
             _delayTimePass = false;
         }
     }

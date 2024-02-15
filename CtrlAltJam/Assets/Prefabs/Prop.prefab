@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4652536548182652589}
   m_Layer: 6
   m_Name: Prop
-  m_TagString: ObjsToThrow
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 7105133639834019587}
   - component: {fileID: 4774156344923169057}
   - component: {fileID: 8466271087401524198}
-  - component: {fileID: 3724996800607980427}
+  - component: {fileID: 232468661983251637}
   m_Layer: 6
   m_Name: Collider
   m_TagString: Untagged
@@ -75,7 +75,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2071563950667344868}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 84cd4bf0f52769845a9d0f58512ce9c1, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   mass: 1
---- !u!114 &3724996800607980427
+--- !u!114 &232468661983251637
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
