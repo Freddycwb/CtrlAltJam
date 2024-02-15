@@ -132,6 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visual: {fileID: 7563056469567300295}
+  maxPaint: 2
   paintToEarnPoint: 0.1
 --- !u!1 &7950461499731180141
 GameObject:

@@ -7,6 +7,7 @@ public class Paintable : MonoBehaviour
 {
     [SerializeField] private Renderer visual;
     private float currentPaint;
+    [SerializeField] private float maxPaint = 1;
     [SerializeField] private float paintToEarnPoint = 0.1f;
     private float currentPaintPoint;
 
@@ -15,7 +16,7 @@ public class Paintable : MonoBehaviour
 
     public void Paint(Color color, float sprayIntensity)
     {
-        if (currentPaint >= 1)
+        if (currentPaint >= maxPaint)
         {
             return;
         }
@@ -30,7 +31,7 @@ public class Paintable : MonoBehaviour
                 paint.Invoke();
             }
         }
-        if (currentPaint >= 1)
+        if (currentPaint >= maxPaint)
         {
             if (fullPaint != null)
             {

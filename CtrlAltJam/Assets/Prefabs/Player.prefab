@@ -105,7 +105,6 @@ GameObject:
   m_Component:
   - component: {fileID: 869759734009928591}
   - component: {fileID: 7434663928659542603}
-  - component: {fileID: 1582858030305501305}
   m_Layer: 0
   m_Name: SprayParticle
   m_TagString: Untagged
@@ -143,49 +142,6 @@ MonoBehaviour:
   obj: {fileID: 7517992931284068483, guid: 868e6715f3fea76489abb0765bc4f765, type: 3}
   spawnPoint: {fileID: 1672831884326108984}
   parent: {fileID: 1672831884326108984}
---- !u!114 &1582858030305501305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 915673237199051232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 603c730d0847d2144b54d0a20bcc3b31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spray: {fileID: 1323972627753518940}
-  onStartPaint:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7434663928659542603}
-        m_TargetAssemblyTypeName: Instantiator, Assembly-CSharp
-        m_MethodName: CreateObject
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0.6
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onStopPaint:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ParticleActions, Assembly-CSharp
-        m_MethodName: SetParticleLifeTime
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1046242018207805954
 GameObject:
   m_ObjectHideFlags: 0
@@ -2138,6 +2094,10 @@ PrefabInstance:
       propertyPath: input
       value: 
       objectReference: {fileID: 2553054635582231121}
+    - target: {fileID: 5731356777621871617, guid: 86a38ebb966a8a0468ef418ad23a0dfe, type: 3}
+      propertyPath: instantiator
+      value: 
+      objectReference: {fileID: 7434663928659542603}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5272122925282967552, guid: 86a38ebb966a8a0468ef418ad23a0dfe, type: 3}

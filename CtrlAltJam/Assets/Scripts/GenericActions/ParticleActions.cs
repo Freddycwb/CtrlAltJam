@@ -11,4 +11,10 @@ public class ParticleActions : MonoBehaviour
         var main = particle.main;
         main.startLifetime = newLifeTime;
     }
+
+    public void SetParticleColor(Color color)
+    {
+        var main = particle.main;
+        main.startColor = color;
+    }
 }

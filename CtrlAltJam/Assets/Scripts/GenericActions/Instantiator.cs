@@ -24,4 +24,18 @@ public class Instantiator : MonoBehaviour
             objCreated.Invoke(a);
         }
     }
+
+    public GameObject CreateAndReturnObject() 
+    {
+        GameObject a = Instantiate(obj, spawnPoint.position, spawnPoint.rotation);
+        if (parent != null)
+        {
+            a.transform.SetParent(parent);
+        }
+        if (objCreated != null)
+        {
+            objCreated.Invoke(a);
+        }
+        return a;
+    }
 }

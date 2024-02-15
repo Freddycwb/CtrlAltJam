@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.ParticleSystem;
 
 
 public class Spray : MonoBehaviour
@@ -10,6 +11,8 @@ public class Spray : MonoBehaviour
     [SerializeField] private float sprayIntensity = 0.1f;
     [SerializeField] private float sprayDistance = 5;
     [SerializeField] private GameObject damage;
+    [SerializeField] private Instantiator instantiator;
+    private GameObject particle;
 
     [SerializeField] private GameObject input;
     private IInput _input;
@@ -37,6 +40,11 @@ public class Spray : MonoBehaviour
         {
             damage.SetActive(true);
             damage.GetComponent<Painter>().colorSpray = colorSpray;
+            if (instantiator != null)
+            {
+                particle = instantiator.CreateAndReturnObject();
+                particle.GetComponent<ParticleActions>().SetParticleColor(colorSpray);
+            }
             if (startPaint != null)
             {
                 startPaint.Invoke();
@@ -46,6 +54,10 @@ public class Spray : MonoBehaviour
         if (_input.sprayButtonUp)
         {
             damage.SetActive(false);
+            if (instantiator != null)
+            {
+                particle.GetComponent<ParticleActions>().SetParticleLifeTime(0);
+            }
             colorSpray = UnityEngine.Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
             if (stopPaint != null)
             {
