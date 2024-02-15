@@ -59,6 +59,7 @@ public class Throwable : MonoBehaviour
         {
             rb.AddForce(force, ForceMode.Impulse);
         }
+        _getHitBefore = true;
     }
     
     private IEnumerator SetHaveRb()

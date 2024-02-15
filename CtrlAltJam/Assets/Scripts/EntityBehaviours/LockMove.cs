@@ -16,6 +16,10 @@ public class LockMove : MonoBehaviour
 
     public void Lock(Throwable enemy)
     {
+        if (enemiesHolding.Contains(enemy.gameObject))
+        {
+            return;
+        }
         enemiesHolding.Add(enemy.gameObject);
         enemy.getHit += Free;
         enemy.getHitForTheFirstTime += Free;
