@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4209247577334374878}
   - component: {fileID: 343621348013700173}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: LittlePillars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
