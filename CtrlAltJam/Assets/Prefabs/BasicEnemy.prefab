@@ -1079,6 +1079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dir: {fileID: 9000156574945343205}
+  patrolPoints: []
 --- !u!114 &7270002338020582053
 MonoBehaviour:
   m_ObjectHideFlags: 0
