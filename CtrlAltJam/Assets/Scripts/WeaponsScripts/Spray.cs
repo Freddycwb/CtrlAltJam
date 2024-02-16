@@ -12,6 +12,7 @@ public class Spray : MonoBehaviour
     [SerializeField] private float sprayDistance = 5;
     [SerializeField] private GameObject damage;
     [SerializeField] private Instantiator instantiator;
+    private bool painting;
     private GameObject particle;
 
     [SerializeField] private GameObject input;
@@ -36,8 +37,9 @@ public class Spray : MonoBehaviour
 
     void Update()
     {
-        if (_input.sprayButtonDown)
+        if (!painting && _input.sprayButton)
         {
+            painting = true;
             damage.SetActive(true);
             damage.GetComponent<Painter>().colorSpray = colorSpray;
             if (instantiator != null)
@@ -51,8 +53,9 @@ public class Spray : MonoBehaviour
             }
         }
 
-        if (_input.sprayButtonUp)
+        if (painting && !_input.sprayButton)
         {
+            painting = false;
             damage.SetActive(false);
             if (instantiator != null)
             {

@@ -39,6 +39,7 @@ public class Throwable : MonoBehaviour
         {
             rb = gameObject.transform.parent.gameObject.AddComponent<Rigidbody>();
             gameObject.transform.parent.gameObject.GetComponent<Rigidbody>().mass = mass;
+            gameObject.transform.parent.gameObject.GetComponent<Rigidbody>().collisionDetectionMode = CollisionDetectionMode.Continuous;
             StartCoroutine(SetHaveRb());
         }
         if (_getHitBefore)
