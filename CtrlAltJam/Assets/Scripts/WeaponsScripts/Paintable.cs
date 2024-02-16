@@ -14,6 +14,11 @@ public class Paintable : MonoBehaviour
     public Action paint;
     public Action fullPaint;
 
+    public float GetCurrentPaint()
+    {
+        return currentPaint / maxPaint;
+    }
+
     public void Paint(Color color, float sprayIntensity)
     {
         if (currentPaint >= maxPaint)

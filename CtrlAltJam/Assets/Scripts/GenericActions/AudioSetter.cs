@@ -8,6 +8,8 @@ public class AudioSetter : MonoBehaviour
     [SerializeField] private AudioClip[] clips;
 
     [SerializeField] private Vector2 minMaxPitch;
+    [SerializeField] private Paintable paint;
+
 
     private void Start()
     {
@@ -23,7 +25,15 @@ public class AudioSetter : MonoBehaviour
         AudioSource source = value.GetComponent<AudioSource>();
         AudioClip currentAudio = clips[Random.Range(0, clips.Length)];
         source.clip = currentAudio;
-        source.pitch = Random.Range(minMaxPitch.x, minMaxPitch.y);
+        if (paint != null)
+        {
+            float dif = minMaxPitch.y - minMaxPitch.x;
+            source.pitch = minMaxPitch.x + (dif * paint.GetCurrentPaint());
+        }
+        else
+        {
+            source.pitch = Random.Range(minMaxPitch.x, minMaxPitch.y);
+        }
         source.Play();
         if (value.GetComponent<Destroyer>() != null)
         {
