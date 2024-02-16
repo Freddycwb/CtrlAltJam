@@ -50665,7 +50665,7 @@ PrefabInstance:
       objectReference: {fileID: 8527955}
     - target: {fileID: 1092207656974024483, guid: 4ca23478630d8ef4c8c85574999c29c5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2581214234559423055, guid: 4ca23478630d8ef4c8c85574999c29c5, type: 3}
       propertyPath: m_Name
@@ -50677,7 +50677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2833083471933958814, guid: 4ca23478630d8ef4c8c85574999c29c5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3522817344149806833, guid: 4ca23478630d8ef4c8c85574999c29c5, type: 3}
       propertyPath: scoreToActive
@@ -50685,11 +50685,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3924568286096296684, guid: 4ca23478630d8ef4c8c85574999c29c5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4231911896329673592, guid: 4ca23478630d8ef4c8c85574999c29c5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5920923495885747901, guid: 4ca23478630d8ef4c8c85574999c29c5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -50733,11 +50733,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7214230892711055548, guid: 4ca23478630d8ef4c8c85574999c29c5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7850913494063922944, guid: 4ca23478630d8ef4c8c85574999c29c5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -74425,7 +74425,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
