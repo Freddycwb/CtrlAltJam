@@ -22,6 +22,11 @@ public class RisingScore : MonoBehaviour
         StartCoroutine(Rising());
     }
 
+    public float GetCurrentScore()
+    {
+        return _currentScore / score.value;
+    }
+
     private IEnumerator Rising()
     {
         while (_currentScore < score.value)
@@ -37,6 +42,7 @@ public class RisingScore : MonoBehaviour
             {
                 increase.Invoke();
             }
+            tmp.text = _currentScore.ToString();
         }
     }
 }

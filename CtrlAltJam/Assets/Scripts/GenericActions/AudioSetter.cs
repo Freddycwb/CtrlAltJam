@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AudioSetter : MonoBehaviour
@@ -9,6 +10,7 @@ public class AudioSetter : MonoBehaviour
 
     [SerializeField] private Vector2 minMaxPitch;
     [SerializeField] private Paintable paint;
+    [SerializeField] private RisingScore rising;
 
 
     private void Start()
@@ -25,10 +27,14 @@ public class AudioSetter : MonoBehaviour
         AudioSource source = value.GetComponent<AudioSource>();
         AudioClip currentAudio = clips[Random.Range(0, clips.Length)];
         source.clip = currentAudio;
+        float dif = minMaxPitch.y - minMaxPitch.x;
         if (paint != null)
         {
-            float dif = minMaxPitch.y - minMaxPitch.x;
             source.pitch = minMaxPitch.x + (dif * paint.GetCurrentPaint());
+        }
+        else if (rising != null)
+        {
+            source.pitch = minMaxPitch.x + (dif * rising.GetCurrentScore());
         }
         else
         {
