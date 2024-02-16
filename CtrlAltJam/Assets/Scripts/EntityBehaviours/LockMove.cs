@@ -6,6 +6,7 @@ using UnityEngine;
 public class LockMove : MonoBehaviour
 {
     [SerializeField] private PlaneMove planeMove;
+    [SerializeField] private Jump jump;
     private List<GameObject> enemiesHolding = new List<GameObject>();
     [SerializeField] private GameEvent gameOver;
     private float maxSpeed;
@@ -28,6 +29,7 @@ public class LockMove : MonoBehaviour
         enemy.getHit += Free;
         enemy.getHitForTheFirstTime += Free;
         planeMove.SetMaxSpeed(maxSpeed / (3 * enemiesHolding.Count));
+        jump.enabled = false;
         if (onLock != null)
         {
             onLock.Invoke();
@@ -47,6 +49,7 @@ public class LockMove : MonoBehaviour
         if (enemiesHolding.Count <= 0)
         {
             planeMove.SetMaxSpeed(maxSpeed);
+            jump.enabled = true;
         }
         else
         {
