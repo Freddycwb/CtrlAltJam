@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: minMaxPitch.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1232202223942823409, guid: 9c839c2cc10df6b4f94ebb406f5bf7a4, type: 3}
+      propertyPath: angle
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 1782154575298644660, guid: 9c839c2cc10df6b4f94ebb406f5bf7a4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -58,11 +62,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4943231235869386128, guid: 9c839c2cc10df6b4f94ebb406f5bf7a4, type: 3}
       propertyPath: startChase.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4943231235869386128, guid: 9c839c2cc10df6b4f94ebb406f5bf7a4, type: 3}
       propertyPath: startLooking.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
-      value: 1.5
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4943231235869386128, guid: 9c839c2cc10df6b4f94ebb406f5bf7a4, type: 3}
+      propertyPath: startWaiting.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023881638626329386, guid: 9c839c2cc10df6b4f94ebb406f5bf7a4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5281792648234233440, guid: 9c839c2cc10df6b4f94ebb406f5bf7a4, type: 3}
+      propertyPath: maxSpeed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5892409926967949358, guid: 9c839c2cc10df6b4f94ebb406f5bf7a4, type: 3}
       propertyPath: minMaxPitch.y

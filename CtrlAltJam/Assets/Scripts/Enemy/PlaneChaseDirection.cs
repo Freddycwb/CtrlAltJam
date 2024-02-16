@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlaneChaseDirection : EnemyDirection
 {
@@ -224,6 +225,14 @@ public class PlaneChaseDirection : EnemyDirection
                 if (stateMachine.currentState == EnemyState.waiting)
                 {
                     _currentPatrolPoint = _currentPatrolPoint + 1 >= patrolPoints.Length ? 0 : _currentPatrolPoint + 1;
+                    for (int i = 0; i < patrolPoints.Length; i++)
+                    {
+                        _currentPatrolPoint = _currentPatrolPoint + 1 >= patrolPoints.Length ? 0 : _currentPatrolPoint + 1;
+                        if (Vector3.Distance(transform.position, patrolPoints[_currentPatrolPoint].position) > margin)
+                        {
+                            break;
+                        }
+                    }
                 }
             }
             return Vector3.zero;

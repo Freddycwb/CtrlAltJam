@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8d749b1e9a4dfc4d9740ee2c6f4641f, type: 3}
   m_Name: PlayerSensitivity
   m_EditorClassIdentifier: 
-  value: {x: 0.5, y: 0.5}
+  value: {x: 0.25, y: 0.25}
   persistBetweenScenes: 0

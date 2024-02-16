@@ -1039,11 +1039,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1232202223942823409, guid: 9c839c2cc10df6b4f94ebb406f5bf7a4, type: 3}
       propertyPath: angle
-      value: 120
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 1232202223942823409, guid: 9c839c2cc10df6b4f94ebb406f5bf7a4, type: 3}
       propertyPath: radius
-      value: 16
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1254624143138156206, guid: 9c839c2cc10df6b4f94ebb406f5bf7a4, type: 3}
       propertyPath: m_Data.m_Mid
@@ -1127,14 +1127,26 @@ PrefabInstance:
       objectReference: {fileID: 1687021925813587511}
     - target: {fileID: 3538841572180817734, guid: 9c839c2cc10df6b4f94ebb406f5bf7a4, type: 3}
       propertyPath: radius
-      value: 12
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 3917177040388647511, guid: 9c839c2cc10df6b4f94ebb406f5bf7a4, type: 3}
       propertyPath: distInfluence
       value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 4943231235869386128, guid: 9c839c2cc10df6b4f94ebb406f5bf7a4, type: 3}
+      propertyPath: startChase.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4943231235869386128, guid: 9c839c2cc10df6b4f94ebb406f5bf7a4, type: 3}
+      propertyPath: startLooking.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4943231235869386128, guid: 9c839c2cc10df6b4f94ebb406f5bf7a4, type: 3}
       propertyPath: startWaiting.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5281792648234233440, guid: 9c839c2cc10df6b4f94ebb406f5bf7a4, type: 3}
+      propertyPath: maxSpeed
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5892409926967949358, guid: 9c839c2cc10df6b4f94ebb406f5bf7a4, type: 3}

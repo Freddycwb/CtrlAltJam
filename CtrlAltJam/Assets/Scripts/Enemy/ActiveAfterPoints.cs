@@ -14,6 +14,7 @@ public class ActiveAfterPoints : MonoBehaviour
         if (score.value >= scoreToActive)
         {
             action.Invoke();
+            Destroy(this);
         }
     }
 }
