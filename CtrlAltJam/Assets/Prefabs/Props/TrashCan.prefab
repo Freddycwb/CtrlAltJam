@@ -83,6 +83,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrashCan
       objectReference: {fileID: 0}
+    - target: {fileID: 2195081027482828309, guid: 148356f765bdf5a4889b22b964ecf9da, type: 3}
+      propertyPath: minMaxPitch.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195081027482828309, guid: 148356f765bdf5a4889b22b964ecf9da, type: 3}
+      propertyPath: minMaxPitch.y
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195081027482828309, guid: 148356f765bdf5a4889b22b964ecf9da, type: 3}
+      propertyPath: clips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2195081027482828309, guid: 148356f765bdf5a4889b22b964ecf9da, type: 3}
+      propertyPath: clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 35b65b40909df034b85b48e8f296ddce, type: 3}
+    - target: {fileID: 2195081027482828309, guid: 148356f765bdf5a4889b22b964ecf9da, type: 3}
+      propertyPath: clips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: b6c72e2e807486e489219c13f445513b, type: 3}
     - target: {fileID: 4652536548182652589, guid: 148356f765bdf5a4889b22b964ecf9da, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
