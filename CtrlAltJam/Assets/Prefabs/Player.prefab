@@ -236,6 +236,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f69b23e2f14e01e4f8e73c8d3957993c, type: 3}
   - {fileID: 8300000, guid: b7000e927b3f7cc4a8d83610e825478a, type: 3}
   minMaxPitch: {x: 0.9, y: 1.1}
+  paint: {fileID: 0}
 --- !u!1 &1216484096466647552
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,6 +872,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 85d2a3078e8c31d40814397d9168d4b2, type: 3}
   - {fileID: 8300000, guid: 03639246eb428354994463d3670984e5, type: 3}
   minMaxPitch: {x: 0.85, y: 1.15}
+  paint: {fileID: 0}
 --- !u!1 &4218531129274019087
 GameObject:
   m_ObjectHideFlags: 0
@@ -1454,6 +1456,7 @@ MonoBehaviour:
   clips:
   - {fileID: 8300000, guid: f8b0442972851e84c96a4686cddc8d09, type: 3}
   minMaxPitch: {x: 0.875, y: 1.125}
+  paint: {fileID: 0}
 --- !u!1 &7130448038292310768
 GameObject:
   m_ObjectHideFlags: 0
@@ -1862,6 +1865,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c9fbfadd7dacd5345895aa1478303d48, type: 3}
   - {fileID: 8300000, guid: 7103565fa4519bd4b9c35f696f97c967, type: 3}
   minMaxPitch: {x: 0.95, y: 1.05}
+  paint: {fileID: 0}
 --- !u!1001 &2570897502566901513
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2318,12 +2322,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1626164863638139976}
     - target: {fileID: 9112581527600353834, guid: 4cc21665095e84f40b9009c798ce8904, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.541
+      objectReference: {fileID: 0}
+    - target: {fileID: 9112581527600353834, guid: 4cc21665095e84f40b9009c798ce8904, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.266
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 9112581527600353834, guid: 4cc21665095e84f40b9009c798ce8904, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.983
+      value: 1.096
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
