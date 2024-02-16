@@ -6,8 +6,14 @@ public class InvokeAfterTimer : InvokeAfter
 {
     [SerializeField] private float timeToAction;
     [SerializeField] private bool desableAfterTimer = true;
+    private float timePassed;
 
     private Coroutine coroutine;
+
+    public float GetTimePassed()
+    {
+        return timeToAction - timePassed;
+    }
 
     private void OnEnable()
     {
@@ -19,7 +25,11 @@ public class InvokeAfterTimer : InvokeAfter
 
     private IEnumerator InvokeAfterSeconds()
     {
-        yield return new WaitForSeconds(timeToAction);
+        for (float i = 0; i < timeToAction; i += Time.deltaTime)
+        {
+            timePassed += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
         CallAction();
         enabled = !desableAfterTimer;
     }
