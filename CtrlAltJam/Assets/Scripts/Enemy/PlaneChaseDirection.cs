@@ -9,6 +9,9 @@ public class PlaneChaseDirection : EnemyDirection
     [SerializeField] private FieldOfView fov;
     private PathFinder _pathFinder;
 
+    [SerializeField] private Transform[] patrolPoints;
+    private int _currentPatrolPoint;
+
     [SerializeField] private float lookingRadius;
     [SerializeField] private float lookingMinRadius;
     private Vector3 _currentLookingPos;
@@ -31,6 +34,11 @@ public class PlaneChaseDirection : EnemyDirection
     protected Vector3 _startPos;
 
     private bool _goingToDestination;
+
+    public void SetPatrolPoints(Transform[] newPatrolPoints)
+    {
+        patrolPoints = newPatrolPoints;
+    }
 
     private void Awake()
     {
@@ -144,7 +152,14 @@ public class PlaneChaseDirection : EnemyDirection
         switch (stateMachine.currentState)
         {
             case EnemyState.waiting:
-                dir = CheckMargin(_startPos, distToDestination);
+                if (patrolPoints.Length > 0)
+                {
+                    dir = CheckMargin(patrolPoints[_currentPatrolPoint].position, distToDestination);
+                }
+                else
+                {
+                    dir = CheckMargin(_startPos, distToDestination);
+                }
                 break;
             case EnemyState.chase:
                 if (_checkingPlayerLastPos)
@@ -206,6 +221,10 @@ public class PlaneChaseDirection : EnemyDirection
                     reachDestination.Invoke();
                 }
                 _checkingPlayerLastPos = false;
+                if (stateMachine.currentState == EnemyState.waiting)
+                {
+                    _currentPatrolPoint = _currentPatrolPoint + 1 >= patrolPoints.Length ? 0 : _currentPatrolPoint + 1;
+                }
             }
             return Vector3.zero;
         }

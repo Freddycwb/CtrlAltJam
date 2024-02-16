@@ -7,12 +7,14 @@ public class EnemyInput : MonoBehaviour, IInput
 {
     [SerializeField] private GameObject dir;
     private EnemyDirection _dir;
+    [SerializeField] private Transform[] patrolPoints;
 
     private bool _canControl = true;
 
     private void Start()
     {
         _dir = dir != null ? dir.GetComponent<EnemyDirection>() : null;
+        _dir.GetComponent<PlaneChaseDirection>().SetPatrolPoints(patrolPoints);
     }
 
     public Vector2 direction
