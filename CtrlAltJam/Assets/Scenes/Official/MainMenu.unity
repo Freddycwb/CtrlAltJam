@@ -40068,7 +40068,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
+  m_VoxelSize: 0.26666668
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 81238855d9b71124f9682c36e401bbad, type: 2}
   m_BuildHeightMesh: 0
@@ -42630,6 +42630,8 @@ GameObject:
   - component: {fileID: 1179431614}
   - component: {fileID: 1179431617}
   - component: {fileID: 1179431618}
+  - component: {fileID: 1179431620}
+  - component: {fileID: 1179431619}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -42711,6 +42713,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Game
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1179431620}
+        m_TargetAssemblyTypeName: Instantiator, Assembly-CSharp
+        m_MethodName: CreateObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1179431615
@@ -42833,6 +42847,38 @@ MonoBehaviour:
             m_StringArgument: Click
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1179431619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179431612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e32ec6a24f8c3cf4aa34125fb0fe3e02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  instantiator: {fileID: 1179431620}
+  clips:
+  - {fileID: 8300000, guid: 3ca382f8453cc2344aeedce6d9bb67ce, type: 3}
+  minMaxPitch: {x: 1, y: 1}
+  paint: {fileID: 0}
+--- !u!114 &1179431620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179431612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46f68f72683b88a49960c1905bb3230a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 5377264777055379553, guid: b917f3f6238ed674db4eea755ecaa0ff, type: 3}
+  spawnPoint: {fileID: 1007977879}
+  parent: {fileID: 0}
 --- !u!1 &1181725318
 GameObject:
   m_ObjectHideFlags: 0
