@@ -19385,6 +19385,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4808724935415996132, guid: abe0127d3921d554ca15df85c2efaba4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1634556173}
     - targetCorrespondingSourceObject: {fileID: 1122619043417050941, guid: abe0127d3921d554ca15df85c2efaba4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 961372094}
@@ -53539,6 +53542,44 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1634556171 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4808724935415996132, guid: abe0127d3921d554ca15df85c2efaba4, type: 3}
+  m_PrefabInstance: {fileID: 520480019}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1634556173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634556171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40bd09bc01bd25f43b2561e2586e4435, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2009875057}
+        m_TargetAssemblyTypeName: LockMove, Assembly-CSharp
+        m_MethodName: CheckEnemies
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  instantiateOnAction: []
+  subAction:
+    m_PersistentCalls:
+      m_Calls: []
+  instantiateOnSubAction: []
+  Event: {fileID: 11400000, guid: cb1078b3bbace534dba6ec3c32cb070f, type: 2}
 --- !u!1 &1635093818
 GameObject:
   m_ObjectHideFlags: 0
@@ -70597,6 +70638,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11390cac5a4fe9d409934e34ff9e0a2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2009875057 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9182926783507604018, guid: abe0127d3921d554ca15df85c2efaba4, type: 3}
+  m_PrefabInstance: {fileID: 520480019}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 756c84b8d7bfe0343818eb080a6a8832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2010100030

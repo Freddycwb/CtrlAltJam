@@ -101,6 +101,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 359cf9abb9be8624bbdaee813bfb9750, type: 3}
   - {fileID: 8300000, guid: 2f080b8f19d3f2f409123adc2dd51380, type: 3}
   minMaxPitch: {x: 0.8, y: 1.2}
+  paint: {fileID: 0}
+  rising: {fileID: 0}
 --- !u!1 &3354685217707846837
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,6 +327,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2049ccc030a915b4f9fdbcacc5777b27, type: 3}
   - {fileID: 8300000, guid: dcc349ddb6043264da466681ab010b28, type: 3}
   minMaxPitch: {x: 0.8, y: 1.2}
+  paint: {fileID: 0}
+  rising: {fileID: 0}
 --- !u!1001 &648585226792088735
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1237,6 +1241,18 @@ MonoBehaviour:
   action:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 11400000, guid: cb1078b3bbace534dba6ec3c32cb070f, type: 2}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 8339433778922328731}
         m_TargetAssemblyTypeName: Destroyer, Assembly-CSharp
         m_MethodName: Delete
