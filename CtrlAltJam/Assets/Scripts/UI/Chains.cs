@@ -12,13 +12,13 @@ public class Chains : MonoBehaviour
     {
         chains[chainsActive].SetActive(true);
         chainsActive++;
-        Mathf.Clamp(0,chains.Length, chainsActive);
+        Mathf.Clamp(0,chains.Length - 1, chainsActive);
     }
 
     public void Free()
     {
         chainsActive--;
         chains[chainsActive].SetActive(false);
-        Mathf.Clamp(0, chains.Length, chainsActive);
+        Mathf.Clamp(0, chains.Length - 1, chainsActive);
     }
 }

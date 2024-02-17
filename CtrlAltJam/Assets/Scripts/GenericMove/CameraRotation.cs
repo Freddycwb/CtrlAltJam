@@ -10,6 +10,8 @@ public class CameraRotation : MonoBehaviour
     private float xRotation = 0f;
     private float yRotation = 0f;
 
+    [SerializeField] private Vector3 offset;
+
     private void OnEnable()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -26,7 +28,7 @@ public class CameraRotation : MonoBehaviour
         xRotation = Mathf.Clamp(xRotation, -135f, 135f);
 
         yRotation += _input.look.y;
-        transform.eulerAngles = new Vector3(xRotation * _input.sensitivity.x, yRotation * _input.sensitivity.y, 0f);
+        transform.eulerAngles = new Vector3(xRotation * _input.sensitivity.x, yRotation * _input.sensitivity.y, 0f) + offset;
     }
 
     private void OnDisable()

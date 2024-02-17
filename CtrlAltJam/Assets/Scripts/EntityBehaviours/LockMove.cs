@@ -19,6 +19,41 @@ public class LockMove : MonoBehaviour
         maxSpeed = planeMove.GetMaxSpeed();
     }
 
+    public void CheckEnemies()
+    {
+        StartCoroutine(Checking());
+    }
+
+    private IEnumerator Checking()
+    {
+        yield return new WaitForSeconds(0.2f);
+        int length = enemiesHolding.Count;
+        for (int i = 0; i < length; i++)
+        {
+            if (length > enemiesHolding.Count)
+            {
+                break;
+            }
+            if (enemiesHolding[i] == null)
+            {
+                enemiesHolding.Remove(enemiesHolding[i]);
+                if (enemiesHolding.Count <= 0)
+                {
+                    planeMove.SetMaxSpeed(maxSpeed);
+                    jump.enabled = true;
+                }
+                else
+                {
+                    planeMove.SetMaxSpeed(maxSpeed / (3 * enemiesHolding.Count));
+                }
+                if (onFree != null)
+                {
+                    onFree.Invoke();
+                }
+            }
+        }
+    }
+
     public void Lock(Throwable enemy)
     {
         if (enemiesHolding.Contains(enemy.gameObject))
