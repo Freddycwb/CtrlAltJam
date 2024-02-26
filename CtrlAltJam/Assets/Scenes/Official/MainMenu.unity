@@ -9546,7 +9546,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &236405530
 Transform:
   m_ObjectHideFlags: 0
@@ -12030,7 +12030,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &310510165
 Transform:
   m_ObjectHideFlags: 0
@@ -19585,7 +19585,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &580497580
 Transform:
   m_ObjectHideFlags: 0
@@ -28797,7 +28797,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &776700043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52800,6 +52800,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CtrlAlt_Moldure_1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1212162434b4185438144a2e72c0b2c6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -64949,7 +64953,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1536591014
 Transform:
   m_ObjectHideFlags: 0
@@ -65180,7 +65184,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1554667893
 AudioSource:
   m_ObjectHideFlags: 0
@@ -84501,6 +84505,10 @@ PrefabInstance:
     - target: {fileID: 5997224041271346823, guid: c8b8cae51a3fe8b4882aac6942887674, type: 3}
       propertyPath: m_Name
       value: SceneController
+      objectReference: {fileID: 0}
+    - target: {fileID: 5997224041271346823, guid: c8b8cae51a3fe8b4882aac6942887674, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
